@@ -14,7 +14,7 @@ GitHub: profile:  [koko69420](https://github.com/koko69420)
 Linkedin: [Kausthubh Viswanath](https://www.linkedin.com/in/kausthubh-viswanath-9561a7206)
 
 ## Task - 1
-In this taks the basics of creating a assembly dump is explored.
+In this task the basics of creating a assembly dump is explored.
 For the first part of the task a c program is created where the program sums the numbers up to the pre-defined nth number.
 
 The code is written in vscode's text editor instead of leafpad.
