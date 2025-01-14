@@ -9,7 +9,7 @@ College: RV Institute of Technology and Management
 
 Email-ID: rvit23bec005.rvitm@rvei.edu.in 
 
-GitHub: profile:  [koko69420](https://github.com/koko69420)
+GitHub profile:  [koko69420](https://github.com/koko69420)
 
 Linkedin: [Kausthubh Viswanath](https://www.linkedin.com/in/kausthubh-viswanath-9561a7206)
 
