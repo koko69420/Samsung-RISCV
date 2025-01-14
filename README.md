@@ -13,7 +13,12 @@ GitHub: profile:  [koko69420](https://github.com/koko69420)
 
 Linkedin: [Kausthubh Viswanath](https://www.linkedin.com/in/kausthubh-viswanath-9561a7206)
 
-## Task - 1
+<details>
+
+  <summary>
+    <h2>Task - 1</h2>
+  </summary>
+
 In this task the basics of creating a assembly dump is explored.
 For the first part of the task a c program is created where the program sums the numbers up to the pre-defined nth number.
 
@@ -34,3 +39,6 @@ In this second snapshot, it shows the creation of the c file and the execution o
 
 In this snapshot, it shows the the output when the code is converted into assembly language.
 The first snapshot is when it is set to 'o1', and the second is when it is set to 'ofast'.
+
+
+</details>
