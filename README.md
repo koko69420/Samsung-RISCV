@@ -42,3 +42,30 @@ The first snapshot is when it is set to 'o1', and the second is when it is set t
 
 
 </details>
+
+<details>
+
+  <summary>
+    <h2>Task - 2</h2>
+  </summary>
+  In this task program execution and debugging in assembly language is explored. To complete this task a new c program has to be written that is different than that of the previous example. So for this I decided to write a program that calculates the factorial of a given number 'n'. 
+
+  ![Screenshot of c program where n=15](Task-2/code.png)
+  ![Screenshot of c program output where n=15](Task-2/gcc_output.png)
+
+  In this snapshot, it displays the c program aswell as the output of the program when running it with gcc.
+  
+  ![Screenshot of c program where n=15](Task-2/o1_compiler_optimization.png)
+  ![Screenshot of c program output where n=15](Task-2/ofast_compiler_optimization.png)
+   
+  In these snapshots, it displays the assembly language dump created using the 'o1' and 'ofast' complier optimization respectivly. These sanpshots only display the 'main' part of the c program.
+  
+  ![Screenshot of c program where n=15](Task-2/spike_output.png)
+  
+  In this snapshot, it shows the program which is in assembly language being executed by using 'spike'.
+  
+  ![Screenshot of c program where n=15](Task-2/reg_change.png)
+  
+  In this snapshot, debugging is done by using spike. Here all the instructions till the main function is executed; then the value of register 'sp' is checked before and after the command which changes the value of the registery is executed. Here the difference in the value is -48 (-30 in hex).
+  
+  </details>
