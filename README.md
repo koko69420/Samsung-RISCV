@@ -268,3 +268,89 @@ The next step is to analyze the code using the riscv-objdump tool to identify 15
 
 
   </details>
+
+
+
+
+<details>
+
+  <summary>
+    <h2>Task - 4</h2>
+  </summary>
+
+## Functional Simulation of RISC-V Core
+
+### Overview
+This task involves performing a functional simulation of the given **RISC-V Core Verilog netlist** and **testbench**. The goal is to verify the functionality of the core by setting up a simulation environment, running the simulation, and capturing waveforms.
+
+### Prerequisites
+Ensure the following files are present in the same directory:
+- `iiitb_rv32i.v` (RISC-V core implementation)
+- `iiitb_rv32i_tb.v` (Testbench)
+
+### Testbench Code (`iiitb_rv32i_tb.v`)
+Below is the testbench used for simulation:
+
+```verilog
+module iiitb_rv32i_tb;
+
+reg clk, RN;
+wire [31:0] WB_OUT, NPC;
+
+// Instantiate the DUT (Design Under Test)
+iiitb_rv32i rv32 (.clk(clk), .RN(RN), .NPC(NPC), .WB_OUT(WB_OUT));
+
+// Clock generation
+always #3 clk = ~clk;  // Toggle clk every 3 time units
+
+initial begin
+    // Initialize inputs
+    clk = 1'b0; 
+    RN  = 1'b1; // Assert reset
+     
+    $dumpfile ("iiitb_rv32i.vcd"); // VCD file for waveform
+    $dumpvars (0, iiitb_rv32i_tb);
+    
+    #10 RN = 1'b0;  // De-assert reset after 10 time units
+
+    #300 $finish; // Stop simulation after 300 time units
+end
+
+endmodule
+```
+
+### Compilation and Simulation Steps
+
+1. **Compile the Testbench and Core**
+   ```sh
+   iverilog -o iiitb_rv32i_tb.vvp iiitb_rv32i_tb.v iiitb_rv32i.v
+   ```
+   - This command compiles both the **testbench** and the **RISC-V Core**.
+
+2. **Run the Simulation**
+   ```sh
+   vvp iiitb_rv32i_tb.vvp
+   ```
+   - This executes the compiled testbench.
+
+3. **View Waveforms in GTKWave**
+   ```sh
+   gtkwave iiitb_rv32i.vcd
+   ```
+   - This opens the generated waveform file for debugging.
+
+### Expected Output
+- The simulation should generate the `iiitb_rv32i.vcd` file.
+- The waveform should display proper signal transitions for **clk**, **RN**, **NPC**, and **WB_OUT**.
+
+### Output Waveform
+![](Task-4/iiitb_rv32i_wave.png)
+
+The following files were used:
+1. `iiitb_rv32i.v` (Core Implementation)
+2. `iiitb_rv32i_tb.v` (Testbench)
+3. `iiitb_rv32i.vcd` (Waveform Output)
+4. `task4_riscv_sim.md` (This Markdown Documentation)
+
+
+  </details>
